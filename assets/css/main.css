@@ -10,6 +10,9 @@
   --accent-strong: #8cff7a;
   --danger: #ff6b81;
   --warning: #ffd166;
+  --json-key: #61d9ff;
+  --json-value: #39ff88;
+  --code-font: "Roboto Mono", ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
   --shadow: 0 28px 90px rgba(0, 0, 0, 0.42);
 }
 
@@ -244,11 +247,11 @@ h1 {
 }
 
 .input-panel {
-  border-color: rgba(85, 224, 198, 0.34);
+  border-color: rgba(255, 209, 102, 0.3);
 }
 
 .output-panel {
-  border-color: rgba(255, 209, 102, 0.3);
+  border-color: rgba(85, 224, 198, 0.34);
 }
 
 .panel-heading {
@@ -280,7 +283,7 @@ h1 {
   box-shadow: 0 0 22px rgba(85, 224, 198, 0.74);
 }
 
-.output-panel .panel-dot {
+.input-panel .panel-dot {
   background: var(--warning);
   box-shadow: 0 0 22px rgba(255, 209, 102, 0.66);
 }
@@ -306,7 +309,7 @@ h1 {
   line-height: 1;
 }
 
-.output-panel .panel-badge {
+.input-panel .panel-badge {
   color: #191104;
   background: linear-gradient(135deg, var(--warning), #ff8f70);
 }
@@ -324,7 +327,7 @@ h1 {
     linear-gradient(90deg, rgba(255, 255, 255, 0.035), transparent 35%);
 }
 
-.output-panel .code-surface {
+.input-panel .code-surface {
   background:
     radial-gradient(circle at 22% 0%, rgba(255, 209, 102, 0.08), transparent 22rem),
     linear-gradient(90deg, rgba(255, 255, 255, 0.035), transparent 35%);
@@ -338,7 +341,7 @@ h1 {
   padding: 22px 13px;
   color: rgba(157, 172, 188, 0.58);
   background: rgba(8, 13, 18, 0.28);
-  font-family: "JetBrains Mono", ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+  font-family: var(--code-font);
   font-size: 0.72rem;
   text-align: right;
   user-select: none;
@@ -357,9 +360,12 @@ pre {
     linear-gradient(rgba(255, 255, 255, 0.024) 1px, transparent 1px),
     transparent;
   background-size: 100% 28px;
-  font-family: "JetBrains Mono", ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
-  font-size: 0.94rem;
-  line-height: 1.7;
+  font-family: var(--code-font);
+  font-size: 0.96rem;
+  font-weight: 400;
+  line-height: 1.65;
+  letter-spacing: 0.01em;
+  font-variant-ligatures: none;
   tab-size: 2;
 }
 
@@ -381,12 +387,12 @@ pre {
   position: relative;
   z-index: 2;
   color: transparent;
-  caret-color: var(--accent);
+  caret-color: var(--warning);
   background: transparent;
 }
 
 .json-input::selection {
-  background: rgba(85, 224, 198, 0.26);
+  background: rgba(255, 209, 102, 0.26);
 }
 
 .input-highlight {
@@ -396,28 +402,21 @@ pre {
 }
 
 .json-highlight {
-  color: #c9d8e8;
+  color: #e6edf5;
+  font-weight: 400;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: geometricPrecision;
 }
 
 .json-highlight .json-key {
-  color: #55e0c6;
-  text-shadow: 0 0 16px rgba(85, 224, 198, 0.28);
+  color: var(--json-key);
 }
 
-.json-highlight .json-string {
-  color: #8fb7ff;
-}
-
-.json-highlight .json-number {
-  color: #ffd166;
-}
-
-.json-highlight .json-boolean {
-  color: #8cff7a;
-}
-
+.json-highlight .json-string,
+.json-highlight .json-number,
+.json-highlight .json-boolean,
 .json-highlight .json-null {
-  color: #ff8f70;
+  color: var(--json-value);
 }
 
 textarea {
@@ -456,11 +455,11 @@ pre {
   place-items: center;
   width: 72px;
   height: 72px;
-  border: 1px solid rgba(255, 209, 102, 0.24);
+  border: 1px solid rgba(85, 224, 198, 0.24);
   border-radius: 8px;
-  color: var(--warning);
-  background: rgba(255, 209, 102, 0.08);
-  font-family: "JetBrains Mono", ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+  color: var(--accent);
+  background: rgba(85, 224, 198, 0.08);
+  font-family: var(--code-font);
   font-size: 1.6rem;
 }
 

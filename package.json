@@ -9,12 +9,12 @@
     "preview": "node node_modules/nuxt/bin/nuxt.mjs preview"
   },
   "dependencies": {
+    "@fontsource/roboto-mono": "^5.2.6",
     "nuxt": "3.12.4",
     "vue": "3.4.31"
   },
   "overrides": {
     "nitropack": "2.9.7",
     "nuxi": "3.12.0"
-  },
-  "devDependencies": {}
+  }
 }

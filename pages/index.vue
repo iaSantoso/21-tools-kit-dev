@@ -242,16 +242,11 @@ onMounted(() => {
 
         <label class="toggle-control">
           <input v-model="sortKeys" type="checkbox">
-          <span>Sort keys</span>
+            <span>Sort keys</span>
         </label>
 
-        <input
-          ref="fileInput"
-          class="file-input"
-          type="file"
-          accept=".json,application/json,text/plain"
-          @change="handleFileUpload"
-        >
+        <input ref="fileInput" class="file-input" type="file" accept=".json,application/json,text/plain"
+          @change="handleFileUpload">
       </section>
 
       <p v-if="error" class="error-banner">
@@ -279,22 +274,11 @@ onMounted(() => {
               <span>05</span>
             </div>
             <div class="input-editor-stack">
-              <pre
-                ref="inputMirror"
-                class="json-highlight input-highlight"
-                aria-hidden="true"
-                v-html="highlightedInput"
-              />
-              <textarea
-                ref="inputEditor"
-                v-model="input"
-                class="json-input"
-                spellcheck="false"
-                placeholder="{ &quot;hello&quot;: &quot;world&quot; }"
-                @scroll="syncInputHighlightScroll"
-                @keydown.meta.enter.prevent="beautifyJson"
-                @keydown.ctrl.enter.prevent="beautifyJson"
-              />
+              <pre ref="inputMirror" class="json-highlight input-highlight" aria-hidden="true"
+                v-html="highlightedInput" />
+              <textarea ref="inputEditor" v-model="input" class="json-input" spellcheck="false"
+                placeholder="{ &quot;hello&quot;: &quot;world&quot; }" @scroll="syncInputHighlightScroll"
+                @keydown.meta.enter.prevent="beautifyJson" @keydown.ctrl.enter.prevent="beautifyJson" />
             </div>
           </div>
         </article>
@@ -318,11 +302,7 @@ onMounted(() => {
               <span>04</span>
               <span>05</span>
             </div>
-            <pre
-              v-if="output"
-              class="json-highlight"
-              v-html="highlightedOutput"
-            />
+            <pre v-if="output" class="json-highlight" v-html="highlightedOutput" />
             <div v-else class="empty-output">
               <span>{ }</span>
               <strong>Formatted JSON will appear here</strong>

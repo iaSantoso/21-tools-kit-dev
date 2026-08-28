@@ -1,6 +1,6 @@
 export default defineNuxtConfig({
   devtools: { enabled: true },
-  css: ['~/assets/css/main.css'],
+  css: ['@fontsource/roboto-mono/latin-400.css', '~/assets/css/main.css'],
   compatibilityDate: '2026-07-01',
   app: {
     head: {
