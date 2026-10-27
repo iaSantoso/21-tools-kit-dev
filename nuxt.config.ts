@@ -4,7 +4,7 @@ export default defineNuxtConfig({
   compatibilityDate: '2026-07-01',
   app: {
     head: {
-      title: 'JSON Glow - Beautifier',
+      title: 'JSON Glow — Formatter & Diff Checker',
       link: [
         {
           rel: 'icon',
@@ -27,7 +27,7 @@ export default defineNuxtConfig({
         },
         {
           name: 'description',
-          content: 'A modern JSON formatter, validator, minifier, and viewer built with Nuxt.'
+          content: 'Format, validate, minify, and compare JSON with clear Git-style differences.'
         }
       ]
     }

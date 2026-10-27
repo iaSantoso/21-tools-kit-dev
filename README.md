@@ -23,3 +23,18 @@ npm run dev
 ```bash
 npm run build
 ```
+
+## Automatic Vercel deployment
+
+Every push to `main` triggers the production workflow in
+`.github/workflows/vercel-production.yml`.
+
+Configure these repository secrets in GitHub under
+**Settings → Secrets and variables → Actions**:
+
+- `VERCEL_TOKEN`: a Vercel access token
+- `VERCEL_ORG_ID`: the `orgId` from `.vercel/project.json`
+- `VERCEL_PROJECT_ID`: the `projectId` from `.vercel/project.json`
+
+Run `vercel link` once from this project directory to link the existing Vercel
+project and obtain both IDs. The `.vercel` directory is ignored by Git.
