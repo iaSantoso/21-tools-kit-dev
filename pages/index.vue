@@ -1,6 +1,6 @@
 <script setup lang="ts">
 const sampleJson = `{
-  "project": "JSON Glow",
+  "project": "21-tools-kit-dev",
   "features": ["beautify", "validate", "minify", "copy", "download"],
   "theme": {
     "mode": "modern",
@@ -10,7 +10,7 @@ const sampleJson = `{
 }`
 
 const compareSampleJson = `{
-  "project": "JSON Glow",
+  "project": "21-tools-kit-dev",
   "version": 2,
   "features": ["beautify", "validate", "minify", "compare", "download"],
   "theme": {
@@ -873,7 +873,7 @@ function clearComparison() {
 function applyTheme(mode: ThemeMode) {
   themeMode.value = mode
   document.documentElement.dataset.theme = mode
-  window.localStorage.setItem('json-glow-theme', mode)
+  window.localStorage.setItem('21-tools-kit-dev-theme', mode)
 }
 
 function toggleTheme() {
@@ -918,7 +918,7 @@ watch(() => compareDiff.value.changeGroups.length, (totalChanges) => {
 })
 
 onMounted(() => {
-  const savedTheme = window.localStorage.getItem('json-glow-theme')
+  const savedTheme = window.localStorage.getItem('21-tools-kit-dev-theme')
   const preferredTheme: ThemeMode = savedTheme === 'light' || savedTheme === 'dark'
     ? savedTheme
     : 'light'
@@ -939,10 +939,10 @@ onBeforeUnmount(() => {
       <div class="sticky-workspace-header">
         <header class="topbar">
         <div class="brand-lockup">
-          <img class="brand-logo" src="/favicon-jb.png" alt="JSON Glow logo">
+          <img class="brand-logo" src="/21-tools-kit-logo.svg" alt="21 tools kit dev logo">
           <div>
             <p class="eyebrow">Format · Validate · Compare</p>
-            <h1 class="brand-name"><span>21-Tools Kit Developer</span></h1>
+            <h1 class="brand-name"><span>21-tools-kit-dev</span></h1>
           </div>
         </div>
         <nav class="mode-switch" aria-label="Workspace mode">
@@ -1332,6 +1332,10 @@ onBeforeUnmount(() => {
           <strong>{{ compareDiff.unchanged }}</strong>
         </div>
       </footer>
+
+      <!-- <footer class="creator-credit">
+        Built by <span>Imam Arif Santoso</span>
+      </footer> -->
     </section>
 
     <button v-show="showScrollTop" class="scroll-top-button" type="button" aria-label="Scroll to top"

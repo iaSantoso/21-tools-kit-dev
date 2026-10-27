@@ -1,6 +1,6 @@
-# JSON Glow
+# 21-tools-kit-dev
 
-Modern JSON beautifier built with Nuxt.
+A focused developer toolkit for formatting, validating, and comparing JSON, built with Nuxt.
 
 ## Features
 

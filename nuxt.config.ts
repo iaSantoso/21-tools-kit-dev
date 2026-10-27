@@ -4,30 +4,30 @@ export default defineNuxtConfig({
   compatibilityDate: '2026-07-01',
   app: {
     head: {
-      title: 'JSON Glow — Formatter & Diff Checker',
+      title: '21-tools-kit-dev — JSON Formatter & Diff Checker',
       link: [
         {
           rel: 'icon',
-          type: 'image/png',
-          href: '/favicon-jb.png'
+          type: 'image/svg+xml',
+          href: '/21-tools-kit-logo.svg'
         },
         {
           rel: 'apple-touch-icon',
-          href: '/favicon-jb.png'
+          href: '/21-tools-kit-logo.png'
         }
       ],
       meta: [
         {
           name: 'theme-color',
-          content: '#0b0f14'
+          content: '#edf5f3'
         },
         {
           property: 'og:image',
-          content: '/favicon-jb.png'
+          content: '/21-tools-kit-logo.png'
         },
         {
           name: 'description',
-          content: 'Format, validate, minify, and compare JSON with clear Git-style differences.'
+          content: 'Format, validate, minify, and compare JSON with 21-tools-kit-dev.'
         }
       ]
     }

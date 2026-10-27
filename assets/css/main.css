@@ -147,7 +147,7 @@ button:disabled {
   width: 46px;
   height: 46px;
   flex: 0 0 auto;
-  filter: drop-shadow(0 8px 18px rgba(85, 224, 198, 0.18));
+  filter: drop-shadow(0 5px 12px rgba(13, 48, 43, 0.16));
 }
 
 .mode-switch {
@@ -209,6 +209,7 @@ h1 {
   display: flex;
   align-items: baseline;
   gap: 0.2em;
+  white-space: nowrap;
 }
 
 .theme-toggle {
@@ -1121,6 +1122,21 @@ pre {
 
 .diff-stat.is-unchanged strong {
   color: var(--json-key);
+}
+
+.creator-credit {
+  align-self: center;
+  padding: 2px 0 6px;
+  color: var(--muted);
+  font-size: 0.68rem;
+  font-weight: 400;
+  letter-spacing: 0.045em;
+  opacity: 0.62;
+}
+
+.creator-credit span {
+  color: var(--text);
+  font-weight: 500;
 }
 
 .scroll-top-button {
